@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frippe Fotograf</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script> // NAV alltid längst upp
+            $(function () {
+
+                var msie6 = $.browser == 'msie' && $.browser.version < 7;
+                if (!msie6) {
+                    var top = $('header').offset().top;
+                    $(window).scroll(function (event) {
+                        var y = $(this).scrollTop();
+                        if (y >= top + 0) { $('header').addClass('fixed'); }
+                        else { $('header').removeClass('fixed'); }
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="parallax">
+            <div class="parallax__group">
+                <div class="parallax__layer parallax__layer--back">
+                    <div class="backgroundContent">
+                        <img src="img/bild08.jpg"/>
+                    </div>
+                </div>
+                <div class="parallax__layer parallax__layer--base">
+                    <div class="content">
+                        <img class="logo" src="img/logo.png"/>
+                        <header>
+                            <h3> Välkommen  till  frilansfotografen Frippe Granhög</h3>
+                            <nav><center>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Portfolio</a></li>
+                                </ul>
+                                </center></nav>
+                        </header>
+                        <img src="img/bild02.jpg" class="fullPicture" />
+
+                        <div class="service wedding">
+                            <center>
+                                <img src="http://placehold.it/250x150" />
+                                <h4>Bröllop</h4>
+                            </center>
+                        </div>
+
+                        <div class="service sport">
+                            <center>
+                                <img src="http://placehold.it/250x150" />
+                                <h4>Sport</h4>
+                            </center>
+                        </div>
+
+                        <div class="service ad">
+                            <center>
+                                <img src="http://placehold.it/25s0x150" />
+                                <h4>Reklam</h4>
+                            </center>
+                        </div>
+                        
+                        <footer>
+                            <p>Designed by &copy;Julius Schumacher</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

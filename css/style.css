@@ -1,0 +1,148 @@
+@font-face {
+    font-family: roboto;
+    src: url(font/roboto-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: robotolight;
+    src: url(font/roboto-light-webfont.woff);
+}
+
+body {
+    background-color: #eee;
+    font-size: 1.5em;
+    font-family: robotolight;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    overflow: hidden;
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%; 
+}
+
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.parallax__layer--base {
+    transform: translateZ(0);
+    width: 100%;
+}
+.parallax__layer--back {
+    transform: translateZ(-2px) scale(3);
+    width: 100%;
+}
+
+.backgroundContent img {
+    width: 100%
+}
+
+.content header{
+    background-color: rgba(224, 224, 224, 1);
+    margin: 0;
+}
+
+header h3 {
+    background-color: #259b24;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    height: 50px;
+    padding: 15px;
+}
+
+
+.logo {
+    margin: 43.4% 40% -38px;
+    background: rgba(224, 224, 224, 0.30);
+    width: 20%;
+    padding: 20px;
+}
+
+ul {
+    margin-top: -30px;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto;
+    height: 50px;
+}
+
+li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    padding: 5px 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.fullPicture {
+    width: 100%;
+    margin: -24px 0;
+}
+
+.service {
+    height: 350px;
+    width: 22.5%;
+    float: left;
+    display: inline;
+    position: absolute;
+    top: 1000px;
+    background: rgba(224, 224, 224, 0.60);
+    margin: 0;
+    align-content: center;
+}
+
+.wedding {
+    left: 10%;
+}
+
+.sport {
+    left: 40%;
+}
+
+.ad {
+    left: 70%;
+}
+
+.service img {
+    margin: 30px;
+    width: 250px;
+}
+
+.service h4 {
+    color: #191919;
+    margin-top: -30px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+footer {
+    height: 176px;
+    
