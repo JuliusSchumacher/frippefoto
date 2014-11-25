@@ -4,21 +4,12 @@
         <title>Frippe Fotograf</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
-        <script> // NAV alltid längst upp
-            $(function () {
-
-                var msie6 = $.browser == 'msie' && $.browser.version < 7;
-                if (!msie6) {
-                    var top = $('header').offset().top;
-                    $(window).scroll(function (event) {
-                        var y = $(this).scrollTop();
-                        if (y >= top + 0) { $('header').addClass('fixed'); }
-                        else { $('header').removeClass('fixed'); }
-                    });
-                }
+        <script type="text/javascript"> // SKROLL
+            $(document).ready(function() {
+                $.localScroll({duration:800});
             });
         </script>
+        <link rel="shortcut icon" href="img/iconmonstr-photo-camera-4-icon-16.png">
     </head>
     <body>
 
@@ -32,17 +23,20 @@
                 <div class="parallax__layer parallax__layer--base">
                     <div class="content">
                         <img class="logo" src="img/logo.png"/>
-                        <header>
-                            <h3> Välkommen  till  frilansfotografen Frippe Granhög</h3>
+                        <a href="#welcome"><div class="button">
+                            <img src="img/arrowdown.png"/>
+                            </div></a>
+                        <header id="menu">
+                            <h3 id="welcome"> Välkommen  till  frilansfotografen Frippe Granhög</h3>
                             <nav><center>
                                 <ul>
-                                    <li><a href="#">About</a></li>
+                                    <li><a href="#about">About</a></li>
                                     <li><a href="#">Contact</a></li>
                                     <li><a href="#">Portfolio</a></li>
                                 </ul>
                                 </center></nav>
                         </header>
-                        <img src="img/bild02.jpg" class="fullPicture" />
+                        <img src="img/bild10.jpg" class="fullPicture" />
 
                         <div class="service wedding">
                             <center>
@@ -60,15 +54,24 @@
 
                         <div class="service ad">
                             <center>
-                                <img src="http://placehold.it/25s0x150" />
+                                <img src="http://placehold.it/250x150" />
                                 <h4>Reklam</h4>
                             </center>
                         </div>
                         
+                        <div id="about">
+                            <center>
+                                <img src="http://placehold.it/864x200"/>
+                                <h3>About me</h3>
+                            </center>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta vehicula efficitur. Aliquam porta ipsum at nibh lacinia, quis suscipit tortor faucibus. Nullam consequat tortor consectetur, rutrum felis eget, facilisis sapien. Donec mollis, mi quis porttitor malesuada, nunc turpis molestie nunc, id finibus felis sem ut lectus. Fusce at malesuada leo. Fusce auctor ligula vitae lorem dictum gravida. Nunc porta varius porta. Curabitur commodo magna sed sodales iaculis. Nulla facilisi. Aliquam luctus ornare turpis quis vehicula. Vestibulum nec justo feugiat, convallis lorem eget, sodales enim.</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2144.141381056917!2d12.074338999999995!3d57.492958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fe88eb7c9bc7f%3A0x4cc33ae546018710!2sKungsm%C3%A4ssan+K%C3%B6pcenter!5e0!3m2!1ssv!2sse!4v1413969305973" width="500" height="400" frameborder="0" style="border:0"></iframe>
+                        </div>
+
                         <footer>
                             <p>Designed by &copy;Julius Schumacher</p>
                         </footer>
-                    </div>
+                    </div>   
                 </div>
             </div>
         </div>
